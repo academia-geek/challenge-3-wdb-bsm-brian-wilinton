@@ -12,14 +12,21 @@ html{
 
 body{
     font-family: "Public Sans", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     min-height: 100%;
+    background-color: #E5EEF3;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+header{
+    margin-left: 30px;
 }
 
 .grid-container > *{
-    box-shadow: -1px 3px 7px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 4px;
-    padding: 10px;
+    /* box-shadow: -1px 3px 7px 0px rgba(0, 0, 0, 0.75); */
+    /* border-radius: 4px; */
+    /* padding: 10px; */
     text-align: center;
 }
 
@@ -27,32 +34,135 @@ body{
 
 .grid-header{
     grid-area: grid-header;
-    background-color: darkorchid;
-    
+    background-color: #FFFFFF;
+    /* height: 200px; */
+    margin: 70px 50px 0 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    letter-spacing: 2px;
+    line-height: 30px;
 }
 
 .grid-main{
     grid-area: grid-main;
-    background-color: #fdcfcf;
-
+    background-color:  #2BB3B1;
+    margin: 0px 50px 0 50px;
 }
 
 .grid-aside{
     grid-area: grid-aside;
-    background-color: #afd6af;
+    background-color: #58cece;
+    margin: 0 50px 0 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .grid-footer{
     grid-area: grid-footer;
     background-color: #85aedd;
+    height: 50px;
+    margin-top: 100px;
+    
 }
 
 .grid-container{
     display: grid;
-    gap: 10px;
+    /* gap: 10px; */
     grid-template-areas: 
             "grid-header"
             "grid-main"
             "grid-aside"
             "grid-footer";
+}
+
+
+
+#titulo-header{
+    color: #40a69b;
+    padding-top: 30px;
+    
+}
+
+#titulo-main{
+    color: white;
+    padding-top: 30px;
+}
+
+#parrafo1-header{
+    color: #c1dd45;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#parrafo2-header{
+    color: #BEC2CA;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 30px;
+}
+
+#parrafo1-main{
+    display: flex;
+    color: rgb(224, 224, 215);
+    align-items: center;
+    margin-left: 30px;
+
+}
+
+#span-main{
+    font-size: 2rem;
+    color: white;
+    /* padding-left: 30px; */
+    padding-right: 15px;
+}
+
+#parrafo2-main{
+    color: whitesmoke;
+}
+
+#btn-unico{
+
+    color: whitesmoke;
+    font-size: large;
+    background-color: #BFDF32;
+    border-style: hidden;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    width: 80%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#titulo-aside{
+    color: white;
+    padding-top: 30px;
+
+}
+
+ul{
+    text-align: left;
+    margin-left: 30px;
+    list-style-type: none;
+    padding-bottom: 30px;
+    color: whitesmoke;
+    line-height: 28px;
+}
+
+.attribution{
+    padding-top: 20px;
+}
+
+/****   vista para pc    ****/
+@media (min-width: 900px){
+    .grid-container{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+
+        grid-template-areas: 
+                            "grid-header grid-header"
+                            "grid-main   grid-aside"
+                            "grid-footer grid-footer";
+    }
 }
